@@ -15,6 +15,5 @@ module.exports = {
 		before(app) {
 			registerRouter(app);
 		}
-	},
-	publicPath: process.env.NODE_ENV === 'production' ? '/music-next/' : '/'
+	}
 };
