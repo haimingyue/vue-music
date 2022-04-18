@@ -11,12 +11,15 @@ export function processSongs(songs) {
     })
   }).then((result) => {
     const map = result.map
-    return songs.map((song) => {
+    console.log('songs', songs)
+    const ret = songs.map((song) => {
       song.url = map[song.mid]
       return song
     }).filter((song) => {
       return song.url && song.url.indexOf('vkey') > -1
     })
+    console.log('ret', ret)
+    return ret
   })
 }
 
